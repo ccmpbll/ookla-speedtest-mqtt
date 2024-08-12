@@ -12,6 +12,8 @@ if [! -e /first_start]; then
         speedtest --accept-license --accept-gdpr --format=json-pretty &> /tmp/speedtest-result
     fi
 
+	sed -i '1,16d' /tmp/speedtest-result
+
 	if [[ "${MQTT_PASS}" ]]; then
 		echo "$(date +%D_%T) - Sending Data to ($MQTT_SERVER)..."
 		mosquitto_pub -u $MQTT_USER -P $MQTT_PASS -h $MQTT_SERVER -t $MQTT_TOPIC -f /tmp/speedtest-result
