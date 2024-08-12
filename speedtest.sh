@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [! -e /first_start]; then
+if [ ! -f /first_start ]; then
 	touch /first_start
 	touch /tmp/speedtest-result
 
