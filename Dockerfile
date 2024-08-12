@@ -6,7 +6,7 @@ ARG SPEEDTEST_CLI_VERSION="1.2.0"
 
 RUN apk --no-cache --no-progress update
 RUN apk --no-cache --no-progress upgrade
-RUN apk --no-cache --no-progress add tzdata bash curl jq bc mosquitto-clients
+RUN apk --no-cache --no-progress add tzdata bash curl jq bc moreutils mosquitto-clients
 RUN rm -rf /tmp/* /var/tmp/*
 
 RUN wget https://install.speedtest.net/app/cli/ookla-speedtest-${SPEEDTEST_CLI_VERSION}-linux-x86_64.tgz -O /tmp/ookla-speedtest.tgz
