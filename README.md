@@ -28,7 +28,7 @@ docker run -d -e MQTT_TOPIC='ookla-speedtest/results' -e MQTT_SERVER_='192.168.1
 
 ### Telegraf Config Example:
 
-I use Telegraf to get this data into an InfluxDB instance. Below is an excerpt from my Telegraf config that demonstrates how I accomplish this.
+I used Telegraf to get this data into an InfluxDB instance. Below is an excerpt from my Telegraf config that demonstrates how I accomplish this.
 If there is a better way to do this, I am *very* open to suggestions.
 
 ```TOML
